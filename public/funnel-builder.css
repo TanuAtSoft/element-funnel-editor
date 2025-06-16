@@ -1,0 +1,193 @@
+
+/* Funnel Builder Custom Styles */
+#funnel-builder-container {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#toolbar {
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+#blocks {
+  background: #f9fafb;
+  padding: 16px;
+}
+
+#blocks .gjs-block {
+  width: 100%;
+  height: auto;
+  min-height: 48px;
+  margin-bottom: 8px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#blocks .gjs-block:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  transform: translateY(-1px);
+}
+
+#styles-container, #traits-container {
+  border-radius: 6px;
+}
+
+#styles-container h3, #traits-container h3 {
+  color: #374151;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* GrapesJS Custom Styling */
+.gjs-cv-canvas {
+  background: #f3f4f6;
+}
+
+.gjs-frame {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+/* Toolbar button improvements */
+#toolbar button {
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+}
+
+#toolbar button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+#toolbar select {
+  border-radius: 6px;
+  border: 1px solid #4b5563;
+  transition: all 0.2s ease;
+}
+
+#toolbar select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+#color-picker {
+  border: 2px solid #d1d5db;
+  transition: all 0.2s ease;
+}
+
+#color-picker:hover {
+  border-color: #3b82f6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  #blocks {
+    width: 200px;
+  }
+  
+  .w-80 {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  #toolbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+  
+  #toolbar > div {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  #blocks {
+    width: 100%;
+    height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  #blocks .gjs-block {
+    flex: 1 1 calc(50% - 4px);
+    min-width: calc(50% - 4px);
+  }
+  
+  .w-80 {
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+  }
+}
+
+/* Animation improvements */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.gjs-block {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Color picker enhancement */
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 6px;
+}
+
+/* Better scrollbars */
+#blocks::-webkit-scrollbar,
+#styles::-webkit-scrollbar,
+#traits::-webkit-scrollbar {
+  width: 6px;
+}
+
+#blocks::-webkit-scrollbar-track,
+#styles::-webkit-scrollbar-track,
+#traits::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+#blocks::-webkit-scrollbar-thumb,
+#styles::-webkit-scrollbar-thumb,
+#traits::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+#blocks::-webkit-scrollbar-thumb:hover,
+#styles::-webkit-scrollbar-thumb:hover,
+#traits::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
